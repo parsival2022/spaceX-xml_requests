@@ -66,32 +66,3 @@ class RequestStrategies:
                                 </soapenv:Body>
                             </soapenv:Envelope>"""
     
-
-
-
-# def create_records_from_requests(filename, batch_size=10, delay=1):
-#     url = 'http://ua-1185-mysql-system-api.us-e2.cloudhub.io/SpaceXdbService/SpaceXdbServiceSoapPort'
-#     session = requests.Session()
-#     session.headers.update({'Content-Type': 'application/xml'})
-
-#     with open(filename, 'r') as file:
-#         content = file.read()
-#         records = content.split('</soapenv:Envelope>')
-    
-#     total_records = len(records)
-
-#     for start in range(0, total_records, batch_size):
-#         batch = records[start:start + batch_size]
-
-#         for record in batch:
-#             try:
-#                 response = session.post(url, data=record)
-#                 print(response.text)
-#                 response.raise_for_status()
-#             except requests.exceptions.RequestException as e:
-#                 print(e)
-        
-#         print(f"Batch {start // batch_size + 1} processed. Waiting for {delay} seconds before next batch.")
-#         sleep(delay)
-    
-#     session.close()

@@ -1,4 +1,5 @@
 import requests
+from time import sleep
 from request_strategies import RequestStrategies as RS
 
 PAYLOAD = "payload"
@@ -40,10 +41,26 @@ class DatabaseFiller:
                 for request in requests:
                     file.write(request + "\n")
 
+    def create_records(self):
+        url = 'http://ua-1185-mysql-system-api.us-e2.cloudhub.io/SpaceXdbService/SpaceXdbServiceSoapPort'
+        
+        for entity, request_array in self.dataset.items():
+            for request in request_array:
+                try:
+                    sleep(8)
+                    response = requests.post(url, data=request.encode('utf-8'), headers={"Content-Type": "application/xml", "Accept-Encoding": "gzip, deflate, br"})
+                    print(response.text)
+                    response.raise_for_status()    
+                except requests.HTTPError as e:
+                    print(entity)
+                    print(e)
+                    continue
+
+
 
 payloads = DatabaseFiller(ALL)
 
-payloads.save_soap_requests()
+payloads.create_records()
 
  
 
