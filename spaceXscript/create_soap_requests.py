@@ -47,13 +47,10 @@ class DatabaseFiller:
         for entity, request_array in self.dataset.items():
             for request in request_array:
                 try:
-                    sleep(8)
+                    sleep(4)
                     response = requests.post(url, data=request.encode('utf-8'), headers={"Content-Type": "application/xml", "Accept-Encoding": "gzip, deflate, br"})
-                    print(response.text)
                     response.raise_for_status()    
                 except requests.HTTPError as e:
-                    print(entity)
-                    print(e)
                     continue
 
 
