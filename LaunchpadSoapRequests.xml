@@ -1,0 +1,72 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:roc="http://example.com/rocketservice">
+                                <soapenv:Header/>
+                                <soapenv:Body>
+                                    <roc:CreateLaunchpadRequest>
+                                        <externalId>5e9e4501f5090910d4566f83</externalId>
+                                        <name>VAFB SLC 3W</name>
+                                        <locality>Vandenberg Space Force Base</locality>
+                                        <region>California</region>
+                                        <status>retired</status>
+                                    </roc:CreateLaunchpadRequest>
+                                </soapenv:Body>
+                            </soapenv:Envelope>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:roc="http://example.com/rocketservice">
+                                <soapenv:Header/>
+                                <soapenv:Body>
+                                    <roc:CreateLaunchpadRequest>
+                                        <externalId>5e9e4501f509094ba4566f84</externalId>
+                                        <name>CCSFS SLC 40</name>
+                                        <locality>Cape Canaveral</locality>
+                                        <region>Florida</region>
+                                        <status>active</status>
+                                    </roc:CreateLaunchpadRequest>
+                                </soapenv:Body>
+                            </soapenv:Envelope>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:roc="http://example.com/rocketservice">
+                                <soapenv:Header/>
+                                <soapenv:Body>
+                                    <roc:CreateLaunchpadRequest>
+                                        <externalId>5e9e4502f5090927f8566f85</externalId>
+                                        <name>STLS</name>
+                                        <locality>Boca Chica Village</locality>
+                                        <region>Texas</region>
+                                        <status>under construction</status>
+                                    </roc:CreateLaunchpadRequest>
+                                </soapenv:Body>
+                            </soapenv:Envelope>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:roc="http://example.com/rocketservice">
+                                <soapenv:Header/>
+                                <soapenv:Body>
+                                    <roc:CreateLaunchpadRequest>
+                                        <externalId>5e9e4502f5090995de566f86</externalId>
+                                        <name>Kwajalein Atoll</name>
+                                        <locality>Omelek Island</locality>
+                                        <region>Marshall Islands</region>
+                                        <status>retired</status>
+                                    </roc:CreateLaunchpadRequest>
+                                </soapenv:Body>
+                            </soapenv:Envelope>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:roc="http://example.com/rocketservice">
+                                <soapenv:Header/>
+                                <soapenv:Body>
+                                    <roc:CreateLaunchpadRequest>
+                                        <externalId>5e9e4502f509092b78566f87</externalId>
+                                        <name>VAFB SLC 4E</name>
+                                        <locality>Vandenberg Space Force Base</locality>
+                                        <region>California</region>
+                                        <status>active</status>
+                                    </roc:CreateLaunchpadRequest>
+                                </soapenv:Body>
+                            </soapenv:Envelope>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:roc="http://example.com/rocketservice">
+                                <soapenv:Header/>
+                                <soapenv:Body>
+                                    <roc:CreateLaunchpadRequest>
+                                        <externalId>5e9e4502f509094188566f88</externalId>
+                                        <name>KSC LC 39A</name>
+                                        <locality>Cape Canaveral</locality>
+                                        <region>Florida</region>
+                                        <status>active</status>
+                                    </roc:CreateLaunchpadRequest>
+                                </soapenv:Body>
+                            </soapenv:Envelope>
