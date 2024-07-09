@@ -41,21 +41,22 @@ class DatabaseFiller:
                 for request in requests:
                     file.write(request + "\n")
 
-    def create_records(self):
-        url = 'http://ua-1185-mysql-system-api.us-e2.cloudhub.io/SpaceXdbService/SpaceXdbServiceSoapPort'
+    def create_records(self, url=None):
+        db_url = 'http://ua-1185-mysql-system-api.us-e2.cloudhub.io/SpaceXdbService/SpaceXdbServiceSoapPort' if not url else url
         
         for entity, request_array in self.dataset.items():
             for request in request_array:
                 try:
                     sleep(4)
-                    response = requests.post(url, data=request.encode('utf-8'), headers={"Content-Type": "application/xml", "Accept-Encoding": "gzip, deflate, br"})
+                    response = requests.post(db_url, data=request.encode('utf-8'), headers={"Content-Type": "application/xml", "Accept-Encoding": "gzip, deflate, br"})
                     response.raise_for_status()    
                 except requests.HTTPError as e:
+                    print(response.Envelope)
                     continue
 
 
 
-payloads = DatabaseFiller(ALL)
+payloads = DatabaseFiller(ROCKET)
 
 payloads.create_records()
 
