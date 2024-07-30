@@ -2,6 +2,8 @@ import requests
 from time import sleep
 from request_strategies import RequestStrategies as RS
 
+MONGO_URL = "http://ua-1185-mongo-system-api.us-e2.cloudhub.io/api"
+
 PAYLOAD = "payload"
 ROCKET = "rocket"
 LAUNCH = "launch"
@@ -49,9 +51,10 @@ class DatabaseFiller:
                 try:
                     sleep(4)
                     response = requests.post(db_url, data=request.encode('utf-8'), headers={"Content-Type": "application/xml", "Accept-Encoding": "gzip, deflate, br"})
-                    response.raise_for_status()    
+                    response.raise_for_status()  
+                    print("Created succeffuly")  
                 except requests.HTTPError as e:
-                    print(response.Envelope)
+                    print(response)
                     continue
 
 
@@ -59,6 +62,3 @@ class DatabaseFiller:
 payloads = DatabaseFiller(ROCKET)
 
 payloads.create_records()
-
- 
-
